@@ -5,7 +5,11 @@
 
 <!-- namespace:理解成实现类的全路径(包名加类名) -->
 <mapper namespace="a.b">
-	<!-- id:方法名 -->
+	<!--id:方法名 
+		parameterType:定义参数类型 
+		resultType:返回值类型. 
+		
+		如果方法返回值是 list,在 resultType 中写 List 的泛型, 因为 mybatis 对 jdbc 封装,一行一行读取数据 -->
 	<select id="selAll" resultType="com.pojo.Flower">
 		select * from flower
 	</select>

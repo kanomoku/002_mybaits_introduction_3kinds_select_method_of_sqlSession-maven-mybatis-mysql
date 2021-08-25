@@ -57,7 +57,7 @@ public class Test {
 		Map<Object, Object> map = sqlSession.selectMap("a.b.c", "name");
 		System.out.println(map);
 
-		sqlSession.close();
+		sqlSession.close();  //不关闭的话一直和数据库长连接状态
 	}
 
 }
